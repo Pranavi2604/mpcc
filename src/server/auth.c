@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "/home2/user19/mp/include/functions.h"
+#include "/home2/user19/mp/include/server_fun.h"
 
 #define USER_FILE "/home2/user19/mp/data/users.txt"
 #define BUFFER_SIZE 1024

@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
-#include "/home2/user19/mp/include/functions.h"
+#include "/home2/user19/mp/include/client_fun.h"
 
 void *receive_messages(void *arg) {
     int sockfd = *(int *)arg;

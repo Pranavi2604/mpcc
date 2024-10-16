@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <pthread.h>
-#include "/home2/user19/mp/include/functions.h"
+#include "/home2/user19/mp/include/client_fun.h"
 
 
 #define BUFFER_SIZE 1024

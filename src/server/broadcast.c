@@ -4,7 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
-#include "/home2/user19/mp/include/functions.h"
+#include "/home2/user19/mp/include/server_fun.h"
 
 
 #define MAX_CLIENTS 100

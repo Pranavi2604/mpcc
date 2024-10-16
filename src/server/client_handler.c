@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <pthread.h>
-#include "/home2/user19/mp/include/functions.h"
+#include "/home2/user19/mp/include/server_fun.h"
  
 #define BUFFER_SIZE 1024
 extern int client_sockets[MAX_CLIENTS]; // Client socket array
@@ -18,7 +18,7 @@ void *handle_client(void *arg) {
     while (1) {
         int bytes_received = recv(client_socket, buffer, sizeof(buffer), 0);
         if (bytes_received <= 0) {
-            printf("Client disconnected: %d\n", client_socket);
+            printf("Client disconnected\n");
             break; // Connection closed
         }
         buffer[bytes_received] = '\0'; // Null-terminate the received message
@@ -57,7 +57,7 @@ void *handle_client(void *arg) {
                 printf("Broadcasting message from %s: %s\n", username, buffer);
                 broadcast_message(full_message, client_socket);
             } else {
-                send(client_socket, "You must log in first", 22, 0);
+                send(client_socket, "You must register first", 22, 0);
             }
         }
     }
