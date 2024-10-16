@@ -15,6 +15,9 @@ void *handle_client(void *arg);
 
 void send_message(int sockfd, const char *message);
 void *receive_messages(void *arg);
+int handle_authentication(int client_socket, const char *username, const char *password, int is_registration); 
+
+
 
 #endif // FUNCTIONS_H
 
