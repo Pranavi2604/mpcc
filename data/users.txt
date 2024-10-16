@@ -7,3 +7,9 @@ hello:hello
 dee:dee
 pra:pra
 shrishti:shr123
+shi:shi
+hello:hello
+win:win
+star:vxq
+one:wzr
+pran:sudq

@@ -7,7 +7,7 @@
 #define USER_FILE "/home2/user19/mp/data/users.txt"
 #define BUFFER_SIZE 1024
 
-void register_user(const char *username, const char *password) {
+void register_user( const char *username, const char *password) {
     FILE *file = fopen(USER_FILE, "a");
     if (!file) {
         perror("Could not open user file");
@@ -18,7 +18,7 @@ void register_user(const char *username, const char *password) {
     fclose(file);
 }
 
-int authenticate_user(const char *username, const char *password) {
+int authenticate_user( const char *username,const char *password) {
     FILE *file = fopen(USER_FILE, "r");
     if (!file) {
         perror("Could not open user file");
@@ -39,7 +39,7 @@ int authenticate_user(const char *username, const char *password) {
     return 0; // Authentication failed
 }
 
-int handle_authentication(int client_socket, const char *username, const char *password, int is_registration) {
+int handle_authentication(int client_socket,const char *username, const char *password, int is_registration) {
     if (is_registration) {
         register_user(username, password);
         send(client_socket, "Registration successful", 22, 0);
@@ -53,3 +53,7 @@ int handle_authentication(int client_socket, const char *username, const char *p
         }
     }
 }
+
+
+
+

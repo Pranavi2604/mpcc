@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,8 +24,8 @@ void login_or_register(int sockfd) {
 
     printf("Enter password: ");
     fgets(password, sizeof(password), stdin);
-    password[strcspn(password, "\n")] = '\0'; // Remove newline character
-
+    password[strcspn(password, "\n")] = '\0'; // Remove newline characters
+	encryption(password);
     if (choice == 1) {
         snprintf(buffer, sizeof(buffer), "LOGIN:%s:%s", username, password);
     } else if (choice == 2) {
@@ -94,6 +93,7 @@ int main() {
         if (strcmp(message, "exit") == 0) {
             break; // Exit the chat
         }
+		encryption(message);
         send_message(sockfd, message); // Use the existing send_message function
     }
 
