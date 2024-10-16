@@ -21,4 +21,3 @@ void broadcast_message(const char *message, int sender_id) {
     }
     pthread_mutex_unlock(&mutex);
 }
-

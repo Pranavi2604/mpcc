@@ -53,4 +53,3 @@ int handle_authentication(int client_socket, const char *username, const char *p
         }
     }
 }
-

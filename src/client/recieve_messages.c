@@ -1,4 +1,4 @@
-// receive_message.c
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,8 +18,7 @@ void *receive_messages(void *arg) {
             break;
         }
         buffer[bytes_received] = '\0'; // Null-terminate the received message
-        printf("Server: %s\n", buffer);
+        printf("%s\n", buffer);
     }
     return NULL;
 }
-

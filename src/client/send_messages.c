@@ -11,4 +11,3 @@ void send_message(int sockfd, const char *message) {
         perror("Send failed");
     }
 }
-

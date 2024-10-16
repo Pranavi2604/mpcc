@@ -49,9 +49,8 @@ void *handle_client(void *arg) {
         } else {
             // If user is logged in, broadcast the message
             if (strlen(username) > 0) {
-                char full_message[BUFFER_SIZE];
-			    char *message = buffer + strlen(command) + strlen(username) + 2; 
-                snprintf(full_message, sizeof(full_message), "%s: %s", username,full_message); // Include username in the message
+                char full_message[BUFFER_SIZE]; 
+                snprintf(full_message, sizeof(full_message), "%s: %s", username,buffer); // Include username in the message
                 broadcast_message(full_message, client_socket);
             } else {
                 send(client_socket, "You must log in first", 22, 0);
@@ -72,4 +71,3 @@ void *handle_client(void *arg) {
     close(client_socket);
     return NULL;
 }
-
