@@ -53,6 +53,7 @@ void login_or_register(int sockfd) {
 }
 
 int main() {
+    logger_init();
     int sockfd;
     struct sockaddr_in server_addr;
 

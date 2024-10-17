@@ -5,7 +5,7 @@ void logger_init() {
     struct tm *tm = localtime(&t);
 	
     char log_filename[100];
-    sprintf(log_filename, "../../log/server_log/%d-%02d-%02d.log", tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday);
+    sprintf(log_filename, "/home2/user19/mp/log/server_log/%d-%02d-%02d.log ", tm->tm_year + 1900, tm->tm_mon + 1, tm->tm_mday);
 
     log_file = fopen(log_filename, "a+");
     if (log_file == NULL) {

@@ -13,6 +13,7 @@ int client_sockets[MAX_CLIENTS] = {0}; // Initialize all to 0
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 int main() {
+    logger_init();
     int server_socket, client_socket;
     struct sockaddr_in server_addr, client_addr;
     socklen_t addr_len = sizeof(client_addr);

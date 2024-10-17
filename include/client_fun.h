@@ -16,6 +16,7 @@ void send_message(int sockfd,const char *message);
 void *receive_messages(void *arg); 
 void encryption(char *text);
 void decryption(char *text);
-
+void logger_init() ;
+void logger(char *level, char *filename, int line_number, char *message, char *activity, char *event) ;
 
 #endif 
